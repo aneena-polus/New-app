@@ -1,49 +1,49 @@
 {
-  "hash": "37c15287",
-  "configHash": "19133b93",
+  "hash": "ccee5acc",
+  "configHash": "b123178e",
   "lockfileHash": "5e92551d",
-  "browserHash": "a65096a2",
+  "browserHash": "afa69e48",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "a26363c5",
+      "fileHash": "decccfb2",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "d97e977c",
+      "fileHash": "7f474fb4",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "f5437c0a",
+      "fileHash": "c173d5be",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "55fd960a",
+      "fileHash": "3e8380da",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "5a1d45ef",
+      "fileHash": "f8d5c99d",
       "needsInterop": false
     },
     "@angular/platform-browser/animations/async": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
       "file": "@angular_platform-browser_animations_async.js",
-      "fileHash": "e08b6eef",
+      "fileHash": "c2672403",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "9bab764e",
+      "fileHash": "cd84ac79",
       "needsInterop": false
     }
   },

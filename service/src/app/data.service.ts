@@ -8,13 +8,20 @@ interface Login {
 	lastname?: string;
 	email?: string;
 	designation?: string;
+	roles?:Role[];
 	state?: string;
 	country?: string;
 	phoneNumber?: number;
 	username: string;
 	password: string;
 	employeeCreatedDate?: number;
-};
+}
+
+interface Role {
+	roleId: number;
+	roleName: string;
+	roleDescription: string;
+}
 
 interface Signup {
 	firstname: string;
@@ -26,6 +33,15 @@ interface Signup {
 	phoneNumber: number;
 	username: string;
 	password: string;
+};
+
+interface Country {
+    countryCode: string;
+    countryName: string;
+    currencyCode: string;
+    updateTimestamp: Date;
+    updateUser: string;
+    countryCodeIso2: string;
 };
 
 @Injectable({
@@ -43,5 +59,9 @@ export class DataService {
 
 	signup(post: Signup): Observable<string> {
 		return this.http.post('/api/signup', post, { responseType: 'text' });
+	};
+
+	getCountries(): Observable<Country[]> {
+		return this.http.get<Country[]>('/api/country');
 	};
 }

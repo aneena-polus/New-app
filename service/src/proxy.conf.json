@@ -14,5 +14,13 @@
 		"pathRewrite": {
 			"^/api/signup": ""
 		}
+	},
+	"/api/country": {
+		"target": "http://10.199.100.139:8080/api/auth/country",
+		"secure": false,
+		"changeOrigin": true,
+		"pathRewrite": {
+			"^/api/country": ""
+		}
 	}
 }

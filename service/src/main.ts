@@ -5,5 +5,5 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { AppComponent } from './app/app.component';
 
 bootstrapApplication(AppComponent, {
-  providers: [...appConfig.providers,provideHttpClient(), provideAnimationsAsync()],
+    providers: [...appConfig.providers,provideHttpClient(), provideAnimationsAsync()],
 }).catch((err) => console.error(err));

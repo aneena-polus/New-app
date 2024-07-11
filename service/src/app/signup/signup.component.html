@@ -1,29 +1,43 @@
 <div class="signup-container d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-9 col-sm-12">
                 <form class="form form-control-sm shadow-lg p-3 rounded sign-up-form" aria-label="Signup Form">
                     <h1 class="text-center" aria-label="Sign up" tabindex="0">Sign Up</h1>
-                    <div class="form-outline mb-2">
-                        <label class="form-label" for="signup_user_id" tabindex="-1">Username</label>
-                        <input type="text" id="signup_user_id" class="form-control" name="userid" tabindex="0"
-                            aria-label="Click to enter your username" aria-required="true" [(ngModel)]="username"
-                            required />
-                    </div>
-                    <div class="form-outline mb-2">
-                        <label class="form-label" for="signup_password" tabindex="-1">Password</label>
-                        <div class="input-group">
-                            <input [type]="passwordFieldType" id="signup_password" class="form-control" name="password"
-                                tabindex="0" aria-label="Click to enter your password" [(ngModel)]="password"
-                                aria-required="true" required />
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-light rounded-0" type="button" id="togglePassword"
-                                    tabindex="0" aria-label="Click to show password" aria-required="true"
-                                    (click)="togglePasswordVisibility()">
-                                    <i class="far"
-                                        [ngClass]="{'fa-eye': !passwordVisible, 'fa-eye-slash': passwordVisible}"
-                                        id="togglePassword"></i>
-                                </button>
+                    <div class="row mb-2">
+                        <div class="col-12 col-md-6 mb-2 mb-md-0">
+                            <div class="form-outline mb-2">
+                                <label class="form-label" for="signup_user_id" tabindex="-1">Username</label>
+                                <input type="text" id="signup_user_id" class="form-control" name="userid" tabindex="0"
+                                    aria-label="Click to enter your username" aria-required="true"
+                                    [(ngModel)]="username" required />
+                                <div *ngIf="map1.has('usernameErrorMessage') && isFormSubmitted" id="toast"
+                                    class="font-weight-bold text-danger">
+                                    {{map1.get('usernameErrorMessage')}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-outline mb-2">
+                                <label class="form-label" for="signup_password" tabindex="-1">Password</label>
+                                <div class="input-group">
+                                    <input [type]="passwordFieldType" id="signup_password" class="form-control"
+                                        name="password" tabindex="0" aria-label="Click to enter your password"
+                                        [(ngModel)]="password" aria-required="true" required />
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-light rounded-0" type="button"
+                                            id="togglePassword" tabindex="0" aria-label="Click to show password"
+                                            aria-required="true" (click)="togglePasswordVisibility()">
+                                            <i class="far"
+                                                [ngClass]="{'fa-eye': !isPasswordVisible, 'fa-eye-slash': isPasswordVisible}"
+                                                id="togglePassword"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div *ngIf="map1.has('passwordErrorMessage') && isFormSubmitted" id="toast"
+                                    class="font-weight-bold text-danger">
+                                    {{map1.get('passwordErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -34,6 +48,10 @@
                                 <input type="text" id="first_name" class="form-control" name="first_name" tabindex="0"
                                     aria-label="Click to enter your first name" [(ngModel)]="firstname"
                                     aria-required="true" required />
+                                <div *ngIf="map1.has('firstNameErrorMessage') && isFormSubmitted" id="toast"
+                                    class=" font-weight-bold text-danger">
+                                    {{map1.get('firstNameErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                         <div class="col">
@@ -42,14 +60,21 @@
                                 <input type="text" id="last_name" class="form-control" name="last_name" tabindex="0"
                                     aria-label="Click to enter your last name" [(ngModel)]="lastname"
                                     aria-required="true" required />
+                                <div *ngIf="map1.has('lastNameErrorMessage') && isFormSubmitted" id="toast"
+                                    class=" font-weight-bold text-danger">
+                                    {{map1.get('lastNameErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-outline mb-2">
                         <label class="form-label" for="email" tabindex="-1">Email</label>
                         <input type="email" id="email" class="form-control" name="email" tabindex="0"
-                            aria-label="Click to enter your email"  [(ngModel)]="email"
-                            aria-required="true" required />
+                            aria-label="Click to enter your email" [(ngModel)]="email" aria-required="true" required />
+                        <div *ngIf="map1.has('emailErrorMessage') && isFormSubmitted" id="toast"
+                            class="font-weight-bold text-danger">
+                            {{map1.get('emailErrorMessage')}}
+                        </div>
                     </div>
                     <div class="row mb-2">
                         <div class="col">
@@ -58,6 +83,10 @@
                                 <input type="tel" id="phone_number" class="form-control" name="phone_number"
                                     tabindex="0" aria-label="Click to enter your phone number" aria-required="true"
                                     [(ngModel)]="phoneNumber" required />
+                                <div *ngIf="map1.has('phoneErrorMessage') && isFormSubmitted" id="toast"
+                                    class="font-weight-bold text-danger">
+                                    {{map1.get('phoneErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                         <div class="col">
@@ -66,6 +95,10 @@
                                 <input type="text" id="designation" class="form-control" name="designation" tabindex="0"
                                     [(ngModel)]="designation" aria-label="Click to enter your designation"
                                     aria-required="true" required />
+                                <div *ngIf="map1.has('designationErrorMessage') && isFormSubmitted" id="toast"
+                                    class=" font-weight-bold text-danger">
+                                    {{map1.get('designationErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -76,28 +109,39 @@
                                 <input type="text" id="state" class="form-control" name="state" tabindex="0"
                                     [(ngModel)]="state" aria-label="Click to enter your state" aria-required="true"
                                     required />
+                                <div *ngIf="map1.has('stateErrorMessage') && isFormSubmitted" id="toast"
+                                    class=" font-weight-bold text-danger">
+                                    {{map1.get('stateErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-outline">
                                 <label class="form-label" for="country" tabindex="-1">Country</label>
-                                <input type="text" id="country" class="form-control" name="country" tabindex="0"
-                                    [(ngModel)]="country" aria-label="Click to enter your country" aria-required="true"
-                                    required />
+                                <select id="country" class="form-control" name="country" [(ngModel)]="country"
+                                    aria-label="Select your country" aria-required="true" required>
+                                    <option *ngFor="let country of countries" [value]="country.countryCode">
+                                        {{ country.countryName }}
+                                    </option>
+                                </select>
+                                <div *ngIf="map1.has('countryErrorMessage') && isFormSubmitted" id="toast"
+                                    class=" font-weight-bold text-danger">
+                                    {{map1.get('countryErrorMessage')}}
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="errorMessage" id="toast" class=" font-weight-bold text-danger">
-                        {{ errorMessage }}
+                    <div *ngIf="alreadyExistErrorMessage" id="toast" class=" font-weight-bold text-danger">
+                        {{ alreadyExistErrorMessage }}
                     </div>
                     <div class="d-flex flex-column align-items-center mb-2">
                         <button type="submit" class="btn btn-light btn-sm" id="signup-btn" tabindex="0"
-                            aria-label="Signup button" role="button" (click)="signupForm()">Sign Up
+                            aria-label="Signup button" role="button" (click)="signup()">Sign Up
                         </button>
                         <div class="pt-2">
-                            Are you an existing user? 
-                            <a class="link-light py-2" id="go-to-login" routerLink="/login"
-                                tabindex="0" aria-label="Click here to login">Click Here
+                            Are you an existing user?
+                            <a class="link-light py-2" id="go-to-login" routerLink="/login" tabindex="0"
+                                aria-label="Click here to login">Click Here
                             </a>
                         </div>
                     </div>

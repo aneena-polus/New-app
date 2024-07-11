@@ -9,3 +9,12 @@ export interface Signup {
     username: string;
     password: string;
 }
+
+export interface Country {
+    countryCode: string;
+    countryName: string;
+    currencyCode: string;
+    updateTimestamp: Date;
+    updateUser: string;
+    countryCodeIso2: string;
+};
