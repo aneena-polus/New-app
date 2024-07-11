@@ -1,0 +1,67 @@
+{
+  "hash": "37c15287",
+  "configHash": "19133b93",
+  "lockfileHash": "5e92551d",
+  "browserHash": "a65096a2",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "a26363c5",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "d97e977c",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "f5437c0a",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "55fd960a",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "5a1d45ef",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "e08b6eef",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "9bab764e",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PADEUZ2H": {
+      "file": "chunk-PADEUZ2H.js"
+    },
+    "chunk-YRA7G55I": {
+      "file": "chunk-YRA7G55I.js"
+    },
+    "browser-IJMIIOKT": {
+      "file": "browser-IJMIIOKT.js"
+    },
+    "chunk-PDERP6EP": {
+      "file": "chunk-PDERP6EP.js"
+    },
+    "chunk-LMD6HBRU": {
+      "file": "chunk-LMD6HBRU.js"
+    }
+  }
+}
