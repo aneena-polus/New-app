@@ -3,18 +3,18 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 interface Login {
-	employeeId?: number;
-	firstname?: string;
-	lastname?: string;
-	email?: string;
-	designation?: string;
-	roles?:Role[];
-	state?: string;
-	country?: string;
-	phoneNumber?: number;
-	username: string;
-	password: string;
-	employeeCreatedDate?: number;
+    employeeId?: number;
+    firstname?: string;
+    lastname?: string;
+    email?: string;
+    designation?: string;
+    roles?: Role[];
+    state?: string;
+    country?: string;
+    phoneNumber?: number;
+    username: string;
+    password: string;
+    employeeCreatedDate?: number;
 }
 
 interface Role {
@@ -49,7 +49,6 @@ interface Country {
 })
 
 export class DataService {
-	public loginMessage: string = '';
 
 	constructor(private http: HttpClient) { }
 
