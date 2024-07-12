@@ -35,13 +35,13 @@ export class LoginComponent {
 			}).subscribe({
 				next: (response) => {
 					if(response && response.roles) {
-            const adminRole = response.roles.find(roles => roles.roleId === 1);
-            if(adminRole) {
-              this._ROUTER.navigate(['/admin']);
-            }
+						const adminRole = response.roles.find(roles => roles.roleId === 1);
+						if(adminRole) {
+							this._ROUTER.navigate(['/admin']);
+						}
 						else {
-              this._ROUTER.navigate(['/userdashboard']);
-            }
+							this._ROUTER.navigate(['/userdashboard']);
+						}
 						console.log(response);
 					}
 					else {
